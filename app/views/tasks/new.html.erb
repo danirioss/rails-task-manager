@@ -1,0 +1,21 @@
+<h1>Create a new Task</h1>
+
+<%#= form_with model: @task do |f| %>
+  <%#= f.label :title %>
+  <%#= f.text_field :title %>
+  <%#= f.label :details %>
+  <%#= f.text_field :details %>
+  <%#= f.label :completed %>
+  <%#= f.boolean_field :completed %>
+  <%#= f.submit %>
+<%# end %>
+
+<%= form_with url: "/new", method: :get do |f| %>
+  <%= f.label :query, "Title:" %>
+  <%= f.text_field :query %>
+  <%= f.label :query, "Details:" %>
+  <%= f.text_area :query %>
+  <%= f.submit "Create Task" %>
+<% end %>
+
+<%= link_to "Back to list", tasks_path %>
