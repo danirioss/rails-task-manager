@@ -1,0 +1,7 @@
+<%= form_with url: "/new", method: :get do |f| %>
+  <%= f.label :query, "Title:" %>
+  <%= f.text_field :query %>
+  <%= f.label :query, "Details:" %>
+  <%= f.text_area :query %>
+  <%= f.submit "Create Task" %>
+<% end %>
