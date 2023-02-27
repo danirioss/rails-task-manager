@@ -1,12 +1,11 @@
 <h1>Edit your task</h1>
 
-<%= form_with url: "/new", method: :get do |f| %>
-  <%= f.label :task, "Title:" %>
-  <%= f.text_field :task %>
-  <%= f.label :task, "Details:" %>
-  <%= f.text_area :task %>
-  <%= f.check_box :task %>
-  <%= f.label :task, "Completed" %>
+<%= form_with model: @task do |f| %>
+  <%= f.label "Title:" %>
+  <%= f.text_field :title %>
+  <%= f.label "Details:" %>
+  <%= f.text_area :details %>
+
   <%= f.submit "Update Task" %>
 <% end %>
 
